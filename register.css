@@ -47,9 +47,7 @@ form,label{
     font-size: 40px;
     
   }
-  span{
-    font-size:10px;
-  }
+
   /* Change Autocomplete styles in Chrome*/
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
