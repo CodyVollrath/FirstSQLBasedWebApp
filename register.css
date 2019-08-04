@@ -1,0 +1,65 @@
+@import "compass/css3";
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300,800);
+
+*{
+    margin:0px;
+    padding:0px;
+}
+body{
+    background: #1D1B1B;
+}
+h1{
+    color:#CCF381;
+}
+.container{
+    border:1px solid #CCF381;
+    padding: 20px;
+    width: auto;
+    border-radius: 20px;
+}
+form,label{
+    font-size: 40px;
+    color: #CCF381;
+    
+}
+  .inputGroup {
+    display: inline-block;
+    width: 400px;
+    font-family: "Open Sans", sans;
+    font-weight: 200;
+    font-size: 30px;
+    color: #CCF381;
+    background: #1D1B1B00;
+    border: 0;
+    border-bottom: 1px #CCF381 solid;
+    outline: 0;
+    text-indent: 10px;
+    transition: all .3s ease-in-out;
+  }
+  #submitButton{
+      border:#CCF381 solid 1px;
+      border-radius:20px;
+  }
+  #submitButton:hover{
+    border:#CCF381 solid 1px;
+    border-radius:20px;
+    font-size: 40px;
+    
+  }
+  /* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border-bottom: 1px solid #FAD744;
+  -webkit-text-fill-color: #FAD744;
+  -webkit-box-shadow: 0 0 0px 1000px #1D1B1B82 inset;
+  font-size: 25px;
+  transition: background-color 5000s ease-in-out 0s;
+}
