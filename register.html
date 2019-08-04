@@ -16,11 +16,11 @@
             <input  id = "username" name = "username" type="username" placeholder="Username" class="inputGroup" required><br>
            
             <label for = "password">Password:</label>
-            <input  id = "password" name = "password" type="password" placeholder="Password" class="inputGroup" required><br>
+            <input  id = "password" name = "password" type="password" placeholder="Password" class="inputGroup" onkeyup="check();" required><br>
             
             <label for = "ConfirmPassword">Confirm Password:</label>
-            <input  id = "ConfirmPassword" name = "ConfirmPassword" type="password" placeholder="Confirm Password" class="inputGroup" required><br>
-
+            <input  id = "ConfirmPassword" name = "ConfirmPassword" type="password" placeholder="Confirm Password" class="inputGroup" onkeyup="check();" required><br>
+            <span id="message" hidden></span><br>
             <label for = "email">Email:</label>
             <input  id = "email" name = "email" type="email" placeholder="johnDoe@email.com" class="inputGroup" title="Please enter a valid email: [johnDoe@gmail.com]"required><br>
             
@@ -32,9 +32,9 @@
         </div>
     </div>
     <!-- JAVASCRIPT_BOOTSTRAP -->
-
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="checkPasswordsMatch.js"></script>
   </body>
 </html>
