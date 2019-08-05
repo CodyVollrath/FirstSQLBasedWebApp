@@ -28,7 +28,6 @@
         $phone =  strtolower($_POST['phone']);
         
         $connection=OpenCon();
-        $query = "SELECT username FROM users WHERE username='$userName'";
         
         //Attemp at prepared statement concerning insert statements
         $insert = $connection->prepare("INSERT INTO users(id,username,password,email,phone) VALUES(?,?,?,?,?)");
