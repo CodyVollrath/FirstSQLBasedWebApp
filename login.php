@@ -35,12 +35,14 @@
                 }
                 else{
                     echo"Check Password";
+                    $goBack = htmlspecialchars($_SERVER['HTTP_REFERER']);
+                    echo"<br><button><a href='$goBack'>Go Back</a></button>";
                 }
             }
             else{
                 echo"Check username and password";
                 $goBack = htmlspecialchars($_SERVER['HTTP_REFERER']);
-                echo"<br><a href='$goBack'>Go Back</a>";
+                echo"<br><button><a href='$goBack'>Go Back</a></button>";
             }
         }
         else{

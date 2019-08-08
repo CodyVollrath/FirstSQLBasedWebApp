@@ -1,15 +1,17 @@
 <?php
   require "login.php";
 ?>
-<!DOCTYPE html>
+    <!DOCTYPE html>
     <html>
-      <head>
+
+    <head>
         <meta charset='UTF-8'>
         <title>Main</title>
         <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous'>
-        <link rel ='stylesheet' href='register.css'>
-      </head>
-      <body>
+        <link rel='stylesheet' href='register.css'>
+    </head>
+
+    <body>
         <?php
           if(!isset($_SESSION['loginUsername'])){
             echo"<h1 align = 'Center'>You have not logged in.</h1>";
@@ -23,7 +25,7 @@
               <a class = 'dropdown-toggle' id='navbarDropdown' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
                 $username
               </a>
-              <div class='dropdown-menu' aria-labelledby='navbarDropdown'>
+              <div class='dropdown-menu dropdown-menu-left' aria-labelledby='navbarDropdown'>
                   <a class='dropdown-item' href='endSession.php'>Logout</a>
                   <a class='dropdown-item' href='#'>Account</a>
               </div>
@@ -48,9 +50,29 @@
               </form>
             </div>
           </nav>
-          
+          <div class = 'contactContainer'>
+            <table>
+              <tr>
+                <th>Contact</th>
+              </tr>
+              <tr>
+                <td>Data</td>
+              </tr>
+            </table>
+          </div>
+          <div class = 'messageContainer'>
+              <table>
+                  <tr>
+                    <th>Message</th>
+                  </tr>
+                  <tr>
+                    <td>Data</td>
+                  </tr>
+                </table>
+          </div>
           ";
           }
         ?>
-      </body>
-</html>
+    </body>
+
+    </html>
