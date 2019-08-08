@@ -44,9 +44,27 @@ form,label{
     border:#CCF381 solid 1px;
     border-radius:20px;
     font-size: 40px;
-    
   }
-
+.navbar{
+  background-color: #CCF381 !important;
+}
+ button:hover{
+   color: #4831D4;
+   background-color: #FAD744;
+   outline-color: #4831D4;
+   size: 30px;
+   border-radius: 20px;
+ }
+ button,a{
+  color:#CCF381;
+ }
+ .search-bar{
+   margin-right: 30% !important;
+ }
+ button,a:hover{
+  text-decoration: none;
+  color:#CCF381;
+ }
   /* Change Autocomplete styles in Chrome*/
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
