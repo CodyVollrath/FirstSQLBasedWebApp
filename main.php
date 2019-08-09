@@ -1,5 +1,6 @@
 <?php
   require "login.php";
+  require "message.php";
 ?>
     <!DOCTYPE html>
     <html>
@@ -44,40 +45,24 @@
                 <div class = 'input-group'>
                     <input class=' form-control mr-sm-2' type='text' placeholder='Search Contacts' aria-label='Search'>
                     <span class='input-group-append'>
-                    <button class='btn btn-outline-success' type='submit'>GO</button>
+                      <button class='btn btn-outline-success' type='submit'>GO</button>
                     </span>
                 </div>
               </form>
             </div>
           </nav>
           <div class = 'mainContainer'>
-          <div class = 'contactContainer'>
-            Contacts
+            <div class = 'contactContainer'>
+              Contacts
+            </div>
+            <div class = 'messageContainer'>";
+              getMessages($username);
+      echo"  </div>
           </div>
-          <div class = 'messageContainer'>
-              <div class = 'messageContainment'>";
-
-                $userContact = "<div class = 'userBar'>User101</div>
-                <div class ='grey-message'>
-                  fine
-                </div>";
-                $userSender = "<div class = 'userBar'>$username</div>
-                <div class = 'green-message'>
-                    how are you?<br>
-                  </div>";
-              echo $userContact;
-              echo $userSender;
-                
-              echo"</div>
-              <div id = 'textBar'>
-                  <input id = 'messageTextBar' placeholder='Message' name = 'messageInput' type='text'>
-                  <button id = 'send' name='sendButton'>SEND</button>
-                </div>
-          </div>
-
-          </div>";
+          ";
           }
-        ?>
+          ?>
+
     </body>
 
     </html>
