@@ -50,27 +50,32 @@
               </form>
             </div>
           </nav>
+          <div class = 'mainContainer'>
           <div class = 'contactContainer'>
-            <table>
-              <tr>
-                <th>Contact</th>
-              </tr>
-              <tr>
-                <td>Data</td>
-              </tr>
-            </table>
+            Contacts
           </div>
           <div class = 'messageContainer'>
-              <table>
-                  <tr>
-                    <th>Message</th>
-                  </tr>
-                  <tr>
-                    <td>Data</td>
-                  </tr>
-                </table>
+              <div class = 'messageContainment'>";
+
+                $userContact = "<div class = 'userBar'>User101</div>
+                <div class ='grey-message'>
+                  fine
+                </div>";
+                $userSender = "<div class = 'userBar'>$username</div>
+                <div class = 'green-message'>
+                    how are you?<br>
+                  </div>";
+              echo $userContact;
+              echo $userSender;
+                
+              echo"</div>
+              <div id = 'textBar'>
+                  <input id = 'messageTextBar' placeholder='Message' name = 'messageInput' type='text'>
+                  <button id = 'send' name='sendButton'>SEND</button>
+                </div>
           </div>
-          ";
+
+          </div>";
           }
         ?>
     </body>

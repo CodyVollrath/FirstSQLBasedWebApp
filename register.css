@@ -3,6 +3,7 @@
 * {
     margin: 0px;
     padding: 0px;
+    
 }
 
 body {
@@ -16,13 +17,25 @@ body {
     width: auto;
     border-radius: 20px;
 }
-
+#messageTextBar{
+    height: 50px;
+    border-radius:20px;
+    width: 90%;
+    background: rgb(37, 36, 36);
+    color:#CCF381;
+    border: 1px solid #CCF381;
+    padding-left: 10px;
+    outline:none;
+    margin-top: 10px;
+}
 .contactContainer {
     border: 1px solid #CCF381;
     position: relative;
     float: left;
     padding-left: 30px;
     width: 30%;
+    height:80vh;
+    overflow: auto;
 }
 
 .messageContainer {
@@ -31,6 +44,7 @@ body {
     float: right;
     padding-left: 30px;
     width: 70%;
+    height: 95vh;
 }
 
 .navbar-brand {
@@ -40,8 +54,7 @@ body {
     cursor: pointer;
 }
 
-form,
-label {
+form,label {
     font-size: 40px;
 }
 
@@ -59,7 +72,16 @@ label {
     text-indent: 10px;
     transition: all .3s ease-in-out;
 }
-
+.mainContainer{
+    margin:10px;
+}
+.messageContainment{
+    height: 80vh;
+    width:90%;
+    overflow: auto;
+    border-bottom: #CCF381 1px solid;
+    
+}
 #submitButton {
     border: #CCF381 solid 1px;
     border-radius: 20px;
@@ -92,11 +114,39 @@ a {
 .search-bar {
     margin-right: 30% !important;
 }
-
+.grey-message,.green-message{
+    border:1px solid #CCF381;
+    width: 96%;
+    border-radius: 20px;
+    padding: 10px;
+    overflow:auto;
+}
+.grey-message{
+    background:grey;
+    border-color: grey;
+}
+.green-message{
+    color:black;
+    background:#CCF381;
+}
+.userBar{
+    margin-top:10px;
+}
 button,
 a:hover {
     text-decoration: none;
     color: #CCF381;
+}
+#send{
+    background-color:#CCF381;
+    width:10%;
+    display:block;
+    overflow: hidden;
+    color:#1D1B1B;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transform: translate3d(0,0,0);
+    margin: auto;
+    cursor:pointer;
 }
 
 
