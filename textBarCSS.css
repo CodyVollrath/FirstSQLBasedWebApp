@@ -1,0 +1,41 @@
+#uploadPicture {
+    background-color: #00000000;
+    border-color: #00000000;
+}
+
+#uploadPicture:hover {
+    background-color: #000000AA;
+    cursor: pointer;
+}
+
+#uploadPicture:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+#sendToContact {
+    background-color: #00000000;
+    border-color: #00000000;
+}
+
+#sendToContact:hover {
+    background-color: #000000AA;
+    cursor: pointer;
+}
+
+#sendToContact:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+#messageTextBar {
+    height: 50px;
+    border-radius: 20px;
+    width: 90%;
+    background: rgb(37, 36, 36);
+    color: #CCF381;
+    border: 1px solid #CCF381;
+    padding-left: 5px;
+    outline: none;
+    margin-top: 10px;
+}

@@ -55,21 +55,30 @@
 
         //Check for matching username
         $query = "SELECT username FROM users WHERE username='$userName'";
-
+        $emailQuery = "SELECT email FROM users WHERE email='$email'";
         //Check if user exists
         if($userCheck = $connection->query($query)){
-          if(mysqli_num_rows($userCheck)>= 1){
-            echo"
-            <h1 align = 'Center'>Username Already Exists</h1>
-            <p align = 'Center'><img src='https://img.icons8.com/clouds/200/000000/delete-database.png'>";
-          }
-          else{
-            //Update database with user information
-            if($request = $connection->query($insert)){
-              emailUser($email,$userName);
-              echo"<p align = 'Center'><img src='https://img.icons8.com/bubbles/200/000000/database.png'></p><br>";
+          if($emailCheck = $connection->query($emailQuery)){
+            if(mysqli_num_rows($emailCheck)>=1){
+              echo"<h1 align = 'Center'>$email already has an account</h1>
+              <p align = 'Center'><img src='https://img.icons8.com/clouds/200/000000/delete-database.png'>";
+            }
+            else{
+              if(mysqli_num_rows($userCheck)>= 1){
+                echo"
+                <h1 align = 'Center'>$userName Already Exists</h1>
+                <p align = 'Center'><img src='https://img.icons8.com/clouds/200/000000/delete-database.png'>";
+              }
+              else{
+                //Update database with user information
+                if($request = $connection->query($insert)){
+                  emailUser($email,$userName);
+                  echo"<p align = 'Center'><img src='https://img.icons8.com/bubbles/200/000000/database.png'></p><br>";
+                }
+              }
             }
           }
+
         }
         else{
           echo"

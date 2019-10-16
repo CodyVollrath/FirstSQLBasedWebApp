@@ -1,0 +1,27 @@
+Please start logging updates from hence forth with date, and change:
+
+10/14/2019: 
+1. Added Camera Button, and reorganized the file structure
+2. Removed mutation observer code in place of my own method called getCountOfDivs();
+3. organized the text bar  and options a bit more
+
+Things to do:
+1. Plan on adding documentination to the code and the methods that we may need to use. 
+2. Add file upload options for image files only. 
+3. Look into gif support
+4. Further file reconstruction needed
+5. Modify message database to include an image directory
+
+_____________________________________________________________________________________________________
+
+
+
+
+_____________________________________________________________________________________________________
+
+
+
+
+
+
+_____________________________________________________________________________________________________

@@ -1,0 +1,204 @@
+@import "compass/css3";
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One&display=swap');
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.addButton {
+    background: none;
+    border: none;
+    outline: 0;
+}
+
+.addButton:hover {
+    cursor: pointer;
+    margin-top: 10px;
+    background-color: #CCF38105;
+}
+
+#addContactTag {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+
+/* MODAL WINDOW */
+
+.modal {
+    color: #1D1B1B;
+}
+
+.modal-submit {
+    border: #1D1B1B 1px solid;
+}
+
+.nameOfContact {
+    background-color: #1D1B1B;
+}
+
+body {
+    background: #1D1B1B;
+    color: #CCF381;
+}
+
+#addContactWindow {
+    box-shadow: 2px 10px 30px #000000;
+    width: 500px;
+}
+
+.container {
+    border: 1px solid #CCF381;
+    padding: 20px;
+    width: auto;
+    border-radius: 20px;
+}
+
+.contactContainer {
+    border: 1px solid #CCF381;
+    position: relative;
+    float: left;
+    padding-left: 30px;
+    width: 30%;
+    height: 80vh;
+    overflow: auto;
+}
+
+.messageContainer {
+    border: 1px solid #CCF381;
+    position: relative;
+    float: right;
+    padding-left: 30px;
+    width: 70%;
+    height: 80vh;
+    overflow: scroll;
+}
+
+.addButton,
+a {
+    color: #CCF381;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.btn-outline-success {
+    border: 1px green solid !important;
+}
+
+.navbar-brand {
+    font-size: 40px;
+    color: rgb(10, 180, 95) !important;
+    font-family: 'Fredoka One';
+    cursor: pointer;
+}
+
+form,
+label {
+    font-size: 40px;
+}
+
+.inputGroup {
+    display: inline-block;
+    width: 400px;
+    font-family: "Open Sans", sans;
+    font-weight: 200;
+    font-size: 30px;
+    background: #1D1B1B00;
+    border: 0;
+    border-bottom: 1px #CCF381 solid;
+    color: #CCF381;
+    outline: 0;
+    text-indent: 10px;
+    transition: all .3s ease-in-out;
+}
+
+.mainContainer {
+    margin: 10px;
+}
+
+.messageContainment {
+    height: 80vh;
+    width: 90%;
+    border-bottom: #CCF381 1px solid;
+}
+
+#submitButton {
+    border: #CCF381 solid 1px;
+    border-radius: 20px;
+    color: #CCF381
+}
+
+#submitButton:hover {
+    border: #CCF381 solid 1px;
+    border-radius: 20px;
+    font-size: 40px;
+}
+
+.navbar {
+    background-color: #CCF381 !important;
+}
+
+.search-bar {
+    margin-right: 30% !important;
+}
+
+.grey-message,
+.green-message {
+    border: 1px solid #CCF381;
+    width: 96%;
+    border-radius: 20px;
+    padding: 10px;
+    overflow: auto;
+}
+
+.grey-message {
+    background: grey;
+    border-color: grey;
+}
+
+.green-message {
+    color: black;
+    background: #CCF381;
+}
+
+.userBar {
+    margin-top: 10px;
+}
+
+button,
+a:hover {
+    text-decoration: none;
+}
+
+#send {
+    background-color: #CCF381;
+    width: 10%;
+    display: block;
+    overflow: hidden;
+    color: #1D1B1B;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transform: translate3d(0, 0, 0);
+    margin: auto;
+    cursor: pointer;
+}
+
+
+/* Change Autocomplete styles in Chrome*/
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    border-bottom: 1px solid #FAD744;
+    -webkit-text-fill-color: #FAD744;
+    -webkit-box-shadow: 0 0 0px 1000px #1D1B1B82 inset;
+    font-size: 25px;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+#textBar {
+    margin-left: 50%;
+}
