@@ -24,7 +24,8 @@ class SpeechRecognition:
         
     def recordAudio(self):
         with speech.Microphone() as source:
-            audio = self.voiceParser.listen(source)
+            self.voiceParser.adjust_for_ambient_noise(source,2)
+            audio = self.voiceParser.listen(source, 5)
         try:
             self.displayTranscribedText(audio)
         except:
