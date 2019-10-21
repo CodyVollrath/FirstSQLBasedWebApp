@@ -25,7 +25,10 @@ class SpeechRecognition:
     def recordAudio(self):
         with speech.Microphone() as source:
             audio = self.voiceParser.listen(source)
-        return audio
+        try:
+            self.displayTranscribedText(audio)
+        except:
+            print("Could not understand your voice :(")
     
     def displayTranscribedText(self,audio):
         self.audioIntake = self.voiceParser.recognize_houndify(audio,self.CLIENT_ID_HOUNDIFY,self.CLIENT_KEY_HOUNDIFY)
@@ -33,9 +36,7 @@ class SpeechRecognition:
 
 def test():
     testRecog = SpeechRecognition()
-    source = testRecog.recordAudio()
-    testRecog.displayTranscribedText(source)
+    testRecog.recordAudio()
 
 test()
-    
     
