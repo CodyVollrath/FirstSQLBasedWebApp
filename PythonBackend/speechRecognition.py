@@ -6,7 +6,7 @@ Deals with leveraging the commands allowed to be used with speech recognition
 @Version 1.0
 '''
 import speech_recognition as speech
-import 
+import pyaudio
 class SpeechRecognition:
 
     """
