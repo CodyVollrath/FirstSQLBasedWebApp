@@ -10,7 +10,7 @@ require_once 'Mail.php';
 
       $headers = array('From' => $from,'To'=> $to,"Subject" => $subject);
       $smtp = Mail::factory('smtp',array('host'=> 'ssl://smtp.gmail.com',
-      'port'=>'465', 'auth'=> true,'username' => '950doenut.buff@gmail.com','password' => 'Xxtriggered_911xX'));
+      'port'=>'465', 'auth'=> true,'username' => '950doenut.buff@gmail.com','password' => 'PASSWORD'));
       
       //Send email
       $mail = $smtp -> send($to,$headers,$msg);
