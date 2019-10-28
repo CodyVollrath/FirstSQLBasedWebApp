@@ -30,7 +30,8 @@
                     </div>
                     <div class="modal-body mx-3">
                         <div class="md-form mb-5">
-                            <input type='file' name='file' id='uploadPic'>
+                            <input type='file' name='file' id='fileName' accept='image/*'>
+                            <button type='buttoon' name='uploadPic'>Upload Picture</button>
                         </div>
                     </div>
                     <div class="modal-footer d-flex justify-content-center">
