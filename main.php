@@ -30,7 +30,7 @@
                     </div>
                     <div class="modal-body mx-3">
                         <div class="md-form mb-5">
-                            <button type='button' onClick='uploadFilePhp' id='sendRequest'>Browse...</button>
+                            <input type='file' name='file' id='uploadPic'>
                         </div>
                     </div>
                     <div class="modal-footer d-flex justify-content-center">
@@ -233,7 +233,10 @@
                     }
 
                     function uploadPicture() {
-
+                        var imageData = new FormData();
+                        jQuery.each(jQuery('#file')[0].files, function(i, file) {
+                            data.append('file-' + i, file)
+                        });
                     }
 
                     function sendNewMessageJS() {
