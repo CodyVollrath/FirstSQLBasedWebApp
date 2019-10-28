@@ -18,7 +18,7 @@
     </head>
 
     <body>
-        <!-- MODAL POPUP -->
+        <!-- UPLOAD MODAL POPUP -->
         <div class="modal fade" id="uploadModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -30,7 +30,7 @@
                     </div>
                     <div class="modal-body mx-3">
                         <div class="md-form mb-5">
-
+                            <button type='button' onClick='uploadFilePhp' id='sendRequest'>Browse...</button>
                         </div>
                     </div>
                     <div class="modal-footer d-flex justify-content-center">
@@ -40,7 +40,7 @@
         </div>
         <!-- END MODAL -->
 
-        <!-- MODAL POPUP -->
+        <!--ADD CONTACT MODAL POPUP -->
         <div class="modal fade" id="windowModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -229,6 +229,10 @@
                                 contact: receiver
                             },
                             function(data, status) {});
+
+                    }
+
+                    function uploadPicture() {
 
                     }
 
