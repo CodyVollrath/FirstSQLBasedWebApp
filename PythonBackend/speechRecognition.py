@@ -1,4 +1,3 @@
-
 '''
 Speech recognition object
 Deals with leveraging the commands allowed to be used with speech recognition

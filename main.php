@@ -2,6 +2,7 @@
   require "login.php";
   require "message.php";
   require_once "contact.php";
+
 ?>
     <!DOCTYPE html>
     <html>
@@ -17,6 +18,28 @@
     </head>
 
     <body>
+        <!-- MODAL POPUP -->
+        <div class="modal fade" id="uploadModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header text-center">
+                        <h4 class="modal-title w-100 font-weight-bold">Upload Image</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                    </div>
+                    <div class="modal-body mx-3">
+                        <div class="md-form mb-5">
+
+                        </div>
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END MODAL -->
+
         <!-- MODAL POPUP -->
         <div class="modal fade" id="windowModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -105,7 +128,7 @@
             <div id = 'textBar'>
               <input id = 'messageTextBar' placeholder='Message' name = 'messageInput' type='text'>
               <button type= 'button' id = 'sendToContact' onClick = 'sendCurrentContactMessage()' name='sendButton'><img src='https://img.icons8.com/dusk/64/000000/send-mass-email.png'></button>
-              <button id = 'uploadPicture' type ='button'><img src='https://img.icons8.com/bubbles/64/000000/camera.png'></button>
+              <button id = 'uploadPicture' type ='button' data-toggle ='modal' data-target ='#uploadModal'><img src='https://img.icons8.com/bubbles/64/000000/camera.png'></button>
             </div>
           </div>";
       echo"  
