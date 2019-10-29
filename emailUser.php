@@ -6,7 +6,7 @@ require_once 'Mail.php';
       $from = '950doenut.buff@gmail.com';
       $to = "$address";
       $subject = "Verification";
-      $msg = "This a test email to verify your registration. You username is $user";
+      $msg = "You username is $user";
 
       $headers = array('From' => $from,'To'=> $to,"Subject" => $subject);
       $smtp = Mail::factory('smtp',array('host'=> 'ssl://smtp.gmail.com',
