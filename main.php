@@ -236,10 +236,7 @@
                     }
 
                     function uploadPicture() {
-                        var imageData = new FormData();
-                        jQuery.each(jQuery('#file')[0].files, function(i, file) {
-                            data.append('file-' + i, file)
-                        });
+                      
                     }
 
                     function sendNewMessageJS() {

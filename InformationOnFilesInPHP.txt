@@ -1,0 +1,10 @@
+// get details of the uploaded file
+$fileTmpPath = $_FILES['uploadedFile']['tmp_name']; tmp_name - The temporary path where the file is uploaded is stored in this variable
+$fileName = $_FILES['uploadedFile']['name']; name - The actual name of the file is stored in this variable 
+$fileSize = $_FILES['uploadedFile']['size']; size - the size of the file
+$fileType = $_FILES['uploadedFile']['type']; type - the type of file (ex: picture, text, etc...)
+
+$fileNameCmps = explode(".", $fileName); explode will strip the string character specified in the first argument from the string in the second argument
+$fileExtension = strtolower(end($fileNameCmps)); strtolower will convert the string into a lowercase file so that it will not be case sensitive
+
+IF there is an error during the file upload, this variable is populated with the appropriate error message

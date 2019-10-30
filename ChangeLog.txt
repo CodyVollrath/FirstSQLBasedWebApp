@@ -4,6 +4,9 @@ Please start logging updates from hence forth with date, and change:
 1. Added Camera Button, and reorganized the file structure
 2. Removed mutation observer code in place of my own method called getCountOfDivs();
 3. organized the text bar  and options a bit more
+4. Added upload modal 
+5. File input button added into the modal and upload button added as well
+6. Currently looking into possible database solutions to hold images in place of messages when image is found.
 
 Things to do:
 1. Plan on adding documentination to the code and the methods that we may need to use. 
