@@ -13,6 +13,7 @@
         <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous'>
         <link rel='stylesheet' href='register.css'>
         <link rel='stylesheet' href='textBarCSS.css'>
+        <link rel='stylesheet' href='fileStyleCSS.css'>
         <script>
         </script>
     </head>
@@ -32,7 +33,7 @@
                         <div class="md-form mb-5">
                           <div id='dropzone'>
                             <input type='file' name='file' id='fileName' accept='image/*'>
-                            <button type='buttoon' name='uploadPic' onClick='uploadPicture()'>Upload Picture</button>
+                            <button type='buttoon' id='fileUpload' name='uploadPic' onClick='uploadPicture()'>Upload Picture</button>
                           </div>
                         </div>
                     </div>
@@ -236,10 +237,7 @@
                     }
 
                     function uploadPicture() {
-                        var imageData = new FormData();
-                        jQuery.each(jQuery('#file')[0].files, function(i, file) {
-                            data.append('file-' + i, file)
-                        });
+                      
                     }
 
                     function sendNewMessageJS() {
