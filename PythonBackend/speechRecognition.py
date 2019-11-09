@@ -12,7 +12,7 @@ class SpeechRecognition:
     Initlizes the audio recognizer and allows for the input of an audio file
     Uses the Houndify API to plug in to the wav file
 
-    PreCondition audio != null
+    PreCondition none
     postcondiiton none
 
     """
