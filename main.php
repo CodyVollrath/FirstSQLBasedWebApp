@@ -31,10 +31,10 @@
                     </div>
                     <div class="modal-body mx-3">
                         <div class="md-form mb-5">
-                          <div id='dropzone'>
-                            <input type='file' name='file' id='fileName' accept='image/*'>
-                            <button type='buttoon' id='fileUpload' name='uploadPic' onClick='uploadPicture()'>Upload Picture</button>
-                          </div>
+                            <form action = 'uploadFilePhp.php' method = "POST" enctype="multipart/form-data">
+                              <input type = 'file' name = 'file'>
+                              <button type = "submit" name = "submit">UPLOAD</button>
+                          </form>
                         </div>
                     </div>
                     <div class="modal-footer d-flex justify-content-center">
@@ -235,9 +235,16 @@
                             function(data, status) {});
 
                     }
-
+                    // Uploads the file data into the uploadFilePhp.php and process it from there while returing the data and status at the same time through the lambda function
                     function uploadPicture() {
-                      
+                      var fileLocation = document.getElementById("fileName").value;
+                      var fileUpload = document.getElementById("fileUpload").value;
+                      $.post('uploadFilePhp.php',{
+                        file: fileLocation,
+                        fileUpload: fileUpload
+                      },
+                      function(data, status) {console.log(data)});
+
                     }
 
                     function sendNewMessageJS() {

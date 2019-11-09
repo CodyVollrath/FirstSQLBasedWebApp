@@ -1,21 +1,20 @@
 <?php
-$targetDir = "pictures/";
-$targetFile = $targetDir . basename($_FILES["fileToUpload"]["name"]);
-$uploadOk = 0;
-
-if(isset($_POST["TBA"])){
-    checkIfImageisImage();
-}
-
-//Check if image is an actual image
-function checkIfImageisImage(){
-    $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
-    if($check !== false){
-        echo "File is an image - " . $check["mime"] . ".";
-        $uploadOk = 1;
-    }
-    else{
-        echo "File is not an image.";
+if(isset($_POST["submit"])){
+    $fileName = $_FILES['file']['name'];
+    $path = $_FILES['file']['tmp_name'];
+    if(isset($fileName)){
+        if(!empty($fileName)){
+            $location = 'images/';
+            if(move_uploaded_file($path,$location.$fileName)){
+                echo 'File upload successfully';
+            }
+        }
+    } else{
+        echo "Select a file!!";
     }
 }
+else{
+    echo "HIT";
+}
+
 ?>
