@@ -31,10 +31,8 @@
                     </div>
                     <div class="modal-body mx-3">
                         <div class="md-form mb-5">
-                            <form action = 'uploadFilePhp.php' method = "POST" enctype="multipart/form-data">
-                              <input type = 'file' name = 'file'>
-                              <button type = "submit" name = "submit">UPLOAD</button>
-                          </form>
+                            <input type = 'file' id = 'file' name ='file'>
+                            <button type = "submit" id = "fileUpload" name = "submit">UPLOAD</button>
                         </div>
                     </div>
                     <div class="modal-footer d-flex justify-content-center">
@@ -169,6 +167,8 @@
                 <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous'></script>
                 <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js' integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl' crossorigin='anonymous'></script>
                 <script>
+                    //Only works if the upload is clicked and file is not empty or null
+                    uploadPicture();
                     function scrollMessagesToBottom() {
                         document.querySelector(".messageContainer").scrollTop = document.querySelector(".messageContainer").scrollHeight;
                     }
@@ -237,14 +237,28 @@
                     }
                     // Uploads the file data into the uploadFilePhp.php and process it from there while returing the data and status at the same time through the lambda function
                     function uploadPicture() {
-                      var fileLocation = document.getElementById("fileName").value;
-                      var fileUpload = document.getElementById("fileUpload").value;
-                      $.post('uploadFilePhp.php',{
-                        file: fileLocation,
-                        fileUpload: fileUpload
-                      },
-                      function(data, status) {console.log(data)});
-
+                      $('#fileUpload').click(function(){
+                        $('#uploadModal').modal('hide');
+                      });
+                      //Constant for input file
+                      const inputFile = document.getElementById("file");
+                      //Constant for button value
+                      const btnUpload = document.getElementById("fileUpload");
+                      //adding a click event listener with a lambda function
+                      btnUpload.addEventListener('click', function(){
+                          //Constant that gets a new XMLHttpRequest Object (AJAX uses this)
+                          const xhr = new XMLHttpRequest();
+                          //Constant that gets a FormData Object: This will hold the file
+                          const formData = new FormData();
+                          //Check the contents of the file  list structure (.files is used to get access to that if you set a constant like I did called inputFile which grabs a file type input)
+                          //console.log(inputFile.files[0]);
+                      
+                          //Use formData.append() to append a string with square brackets for php to an item in a file list array (in this case, just accessing the first element of the one item array)
+                          const file = formData.append("file[]", inputFile.files[0]);
+                      
+                          xhr.open('post','uploadFilePhp.php');
+                          xhr.send(formData);
+                      });                      
                     }
 
                     function sendNewMessageJS() {
