@@ -240,6 +240,9 @@
                       $('#fileUpload').click(function(){
                         $('#uploadModal').modal('hide');
                       });
+                      var username = '<?php echo $username;?>';
+                      var message = document.getElementById("messageTextBar").value;
+                      var receiver = '<?php echo $receiver;?>';
                       //Constant for input file
                       const inputFile = document.getElementById("file");
                       //Constant for button value
@@ -254,8 +257,10 @@
                           //console.log(inputFile.files[0]);
                       
                           //Use formData.append() to append a string with square brackets for php to an item in a file list array (in this case, just accessing the first element of the one item array)
-                          const file = formData.append("file[]", inputFile.files[0]);
-                      
+                          var file = formData.append("file", inputFile.files[0]);
+                          file = formData.append('user',username);
+                          file = formData.append('receiver', receiver);
+                          file = formData.append('message', message);
                           xhr.open('post','uploadFilePhp.php');
                           xhr.send(formData);
                       });                      

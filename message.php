@@ -28,18 +28,41 @@ function getMessagesForUser($username,$receiver){
                 $userOrContact = $messageData['username'];
                 $message = $messageData['message'];
                 $date = $messageData['datetime'];
+                $file = $messageData['file'];
                 if($userOrContact == $receiver){
-                    echo "
-                    <div class = 'userBar'>| $receiver | $date |</div>
-                        <div class ='grey-message'>
-                        $message
+                    if(isset($file) && $file != "No File"){
+                        echo "
+                        <div class = 'userBar'>| $receiver | $date |</div>
+                            <div class ='grey-message'>
+                            $message
+                            <img src = $file>
                         </div>";
+                    }
+                    else{
+                        echo "
+                        <div class = 'userBar'>| $receiver | $date |</div>
+                            <div class ='grey-message'>
+                            $message
+                        </div>";
+                    }
+                    
                 }
                 else{
-                    echo"<div class = 'userBar'>| $username | $date |</div>
-                    <div class = 'green-message'>
-                        $message
-                    </div>";
+                    if(isset($file) && $file != "No File"){
+                        echo "
+                        <div class = 'userBar'>| $username | $date |</div>
+                            <div class ='green-message'>
+                            $message
+                            <img src = $file>
+                        </div>";
+                    }
+                    else{
+                        echo "
+                        <div class = 'userBar'>| $username | $date |</div>
+                            <div class ='green-message'>
+                            $message
+                        </div>";
+                    }
                 }
 
             }
@@ -56,7 +79,7 @@ function sendMessage($username, $receiver, $message){
         $messageCon = OpenCon();
         date_default_timezone_set('america/new_york');
         $date = date('m/d/Y h:i');
-        $sendMessage = "INSERT INTO messages(`id`,`username`,`message`,`datetime`,`contact`) VALUES('','$username','$message','$date','$receiver')";
+        $sendMessage = "INSERT INTO messages(`id`,`username`,`message`,`datetime`,`contact`,`file`) VALUES('','$username','$message','$date','$receiver','No File')";
         if($messageConnection = $messageCon->query($sendMessage)){
             echo"<h1>It worked</h1>";
         }
@@ -64,12 +87,10 @@ function sendMessage($username, $receiver, $message){
             echo"<h1>It DID NOT worked</h1>";
         }
     }
-    
 }
 
 function displayMessages($username,$receiver){
     getMessagesForUser($username,$receiver);
-
 }
 
 ?>
