@@ -105,7 +105,7 @@
             <div id = 'textBar'>
               <input id = 'messageTextBar' placeholder='Message' name = 'messageInput' type='text'>
               <button type= 'button' id = 'sendToContact' onClick = 'sendCurrentContactMessage()' name='sendButton'><img src='https://img.icons8.com/dusk/64/000000/send-mass-email.png'></button>
-              <button id = 'uploadPicture' type ='button'><img src='https://img.icons8.com/bubbles/64/000000/camera.png'></button>
+              <button id = 'uploadPicture' type ='button'><img src='images\camera.png'></button>
             </div>
           </div>";
       echo"  

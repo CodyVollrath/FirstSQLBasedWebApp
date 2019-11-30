@@ -1,6 +1,15 @@
 <?php
 require_once "post.php";
 
+echo "
+<style>
+img{
+    max-width:50%;
+    max-height:auto;
+    border-radius: 10px;
+}
+</style>
+";
 if(isset($_POST['user'])){
     $username = $_POST['user'];
     $receiver = $_POST['contact'];
@@ -35,7 +44,9 @@ function getMessagesForUser($username,$receiver){
                         <div class = 'userBar'>| $receiver | $date |</div>
                             <div class ='grey-message'>
                             $message
-                            <img src = $file>
+                            <div class = 'sentImagesContainer'>
+                                <img src = $file>
+                            </div>
                         </div>";
                     }
                     else{
@@ -53,7 +64,9 @@ function getMessagesForUser($username,$receiver){
                         <div class = 'userBar'>| $username | $date |</div>
                             <div class ='green-message'>
                             $message
-                            <img src = $file>
+                            <div class = 'sentImagesContainer'>
+                                <img src = $file>
+                            </div>
                         </div>";
                     }
                     else{
@@ -92,5 +105,7 @@ function sendMessage($username, $receiver, $message){
 function displayMessages($username,$receiver){
     getMessagesForUser($username,$receiver);
 }
+echo "</body>
 
+</head>";
 ?>

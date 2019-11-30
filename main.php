@@ -13,7 +13,7 @@
         <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous'>
         <link rel='stylesheet' href='register.css'>
         <link rel='stylesheet' href='textBarCSS.css'>
-        <link rel='stylesheet' href='fileStyleCSS.css'>
+        <link rel='stylesheet' href='sentImageCSS.css'>
         <script>
         </script>
     </head>
@@ -130,7 +130,7 @@
             <div id = 'textBar'>
               <input id = 'messageTextBar' placeholder='Message' name = 'messageInput' type='text'>
               <button type= 'button' id = 'sendToContact' onClick = 'sendCurrentContactMessage()' name='sendButton'><img src='https://img.icons8.com/dusk/64/000000/send-mass-email.png'></button>
-              <button id = 'uploadPicture' type ='button' data-toggle ='modal' data-target ='#uploadModal'><img src='https://img.icons8.com/bubbles/64/000000/camera.png'></button>
+              <button id = 'uploadPicture' type ='button' data-toggle ='modal' data-target ='#uploadModal'><img src='images/camera.png'></button>
             </div>
           </div>";
       echo"  

